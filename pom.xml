@@ -26,6 +26,8 @@
 	</repositories>
 
 	<build>
+		<finalName>${project.artifactId}-${project.version}</finalName>
+
 		<plugins>
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
@@ -52,6 +54,56 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
+			<plugin>
+				<artifactId>jdeb</artifactId>
+				<groupId>org.vafer</groupId>
+				<version>0.11</version>
+				<executions>
+					<execution>
+						<phase>install</phase>
+						<goals>
+							<goal>jdeb</goal>
+						</goals>
+						<configuration>
+							<controlDir>${project.basedir}/src/deb/control</controlDir>
+							<timestamped>true</timestamped>
+							<dataSet>
+								<data>
+									<src>${project.build.directory}/${project.build.finalName}-jar-with-dependencies.jar</src>
+									<type>file</type>
+									<mapper>
+										<type>perm</type>
+										<prefix>/usr/local/share/java</prefix>
+										<user>root</user>
+										<group>root</group>
+										<filemode>775</filemode>
+									</mapper>
+								</data>
+								<data>
+									<src>${project.basedir}/src/bin/transmission_manager.sh</src>
+									<type>file</type>
+									<mapper>
+										<type>perm</type>
+										<prefix>/usr/local/bin</prefix>
+										<filemode>775</filemode>
+										<user>root</user>
+										<group>root</group>
+									</mapper>
+								</data>
+							</dataSet>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.3.2</version>
+			</plugin>
 		</plugins>
 	</build>
+	<scm>
+		<connection>scm:git:ziobombo@github.com:ziobombo/ServerPack.git</connection>
+		<url>scm:git:ziobombo@github.com:ziobombo/ServerPack.git</url>
+		<developerConnection>scm:git:ziobombo@github.com:ziobombo/ServerPack.git</developerConnection>
+	</scm>
 </project>
