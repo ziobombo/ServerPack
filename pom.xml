@@ -105,7 +105,7 @@
 	</build>
 	<scm>
 		<url>https://github.com/ziobombo/ServerPack</url>
-		<connection>scm:git:git://github.com/ziobombo/ServerPack.git</connection>
+		<connection>scm:git:git@github.com:ziobombo/ServerPack.git</connection>
 		<developerConnection>scm:git:git@github.com:ziobombo/ServerPack.git</developerConnection>
 	</scm>
 </project>
