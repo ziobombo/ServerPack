@@ -3,6 +3,9 @@
 	<groupId>it.fraguglia</groupId>
 	<artifactId>ServerPack</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+<properties>
+      <project.scm.id>github_ziobombo<project.scm.id>
+    </properties>
 	<dependencies>
 		<dependency>
 			<groupId>nl.stil4m</groupId>
