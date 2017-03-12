@@ -134,8 +134,8 @@
 	</build>
 	<scm>
 		<url>https://github.com/ziobombo/ServerPack</url>
-		<connection>scm:git:git@github.com:ziobombo/ServerPack.git</connection>
-		<developerConnection>scm:git:git@github.com:ziobombo/ServerPack.git</developerConnection>
+		<connection>scm:git:ssh://github.com/ziobombo/ServerPack.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com/ziobombo/ServerPack.git</developerConnection>
 	  <tag>HEAD</tag>
   </scm>
 <distributionManagement>
