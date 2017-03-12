@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>it.fraguglia</groupId>
 	<artifactId>ServerPack</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<dependencies>
 		<dependency>
 			<groupId>nl.stil4m</groupId>
@@ -135,7 +135,7 @@
 		<url>https://github.com/ziobombo/ServerPack</url>
 		<connection>scm:git:ssh://github.com/ziobombo/ServerPack.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com/ziobombo/ServerPack.git</developerConnection>
-	  <tag>ServerPack-0.0.2</tag>
+	  <tag>HEAD</tag>
   </scm>
 <distributionManagement>
     <repository>
