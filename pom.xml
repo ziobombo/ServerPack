@@ -18,6 +18,7 @@
 <properties>
     <!-- github server corresponds to entry in ~/.m2/settings.xml -->
     <github.global.server>github</github.global.server>
+<project.scm.id>github<project.scm.id>
 </properties>
 	<repositories>
 		<repository>
