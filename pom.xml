@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>it.fraguglia</groupId>
 	<artifactId>ServerPack</artifactId>
@@ -15,7 +16,7 @@
 			<version>1.3.1</version>
 		</dependency>
 	</dependencies>
-	
+
 	<licenses>
 		<license>
 			<name>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</name>
@@ -23,7 +24,21 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
-	
+	<developers>
+		<developer>
+			<id>riccardo</id>
+			<name>Riccardo Casazza</name>
+			<email>riccardo.casazza@gmail.com</email>
+				<url>www.fraguglia.it</url>
+				<organization>Fraguglia</organization>
+				<organizationUrl>http://www.fraguglia.it</organizationUrl>
+				<roles>
+					<role>architect</role>
+					<role>developer</role>
+				</roles>
+				<timezone>Europe/Paris</timezone>
+		</developer>
+	</developers>
 	<properties>
 		<!-- github server corresponds to entry in ~/.m2/settings.xml -->
 		<github.global.server>github</github.global.server>
@@ -116,8 +131,8 @@
 		<connection>scm:git:git@github.com:ziobombo/ServerPack.git</connection>
 		<url>scm:git:git@github.com:ziobombo/ServerPack.git</url>
 		<developerConnection>scm:git:git@github.com:ziobombo/ServerPack.git</developerConnection>
-	  <tag>HEAD</tag>
-  </scm>
+		<tag>HEAD</tag>
+	</scm>
 	<distributionManagement>
 		<snapshotRepository>
 			<id>ossrh</id>
