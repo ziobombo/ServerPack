@@ -29,14 +29,14 @@
 			<id>riccardo</id>
 			<name>Riccardo Casazza</name>
 			<email>riccardo.casazza@gmail.com</email>
-				<url>www.fraguglia.it</url>
-				<organization>Fraguglia</organization>
-				<organizationUrl>http://www.fraguglia.it</organizationUrl>
-				<roles>
-					<role>architect</role>
-					<role>developer</role>
-				</roles>
-				<timezone>Europe/Paris</timezone>
+			<url>www.fraguglia.it</url>
+			<organization>Fraguglia</organization>
+			<organizationUrl>http://www.fraguglia.it</organizationUrl>
+			<roles>
+				<role>architect</role>
+				<role>developer</role>
+			</roles>
+			<timezone>Europe/Paris</timezone>
 		</developer>
 	</developers>
 	<properties>
@@ -124,6 +124,9 @@
 			<plugin>
 				<artifactId>maven-release-plugin</artifactId>
 				<version>2.5.3</version>
+				<configuration>
+					<goals> </goals>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
