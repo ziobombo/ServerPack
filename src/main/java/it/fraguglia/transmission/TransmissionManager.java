@@ -5,6 +5,7 @@ import java.net.URI;
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
 import org.apache.commons.cli.DefaultParser;
+import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 
@@ -18,6 +19,9 @@ import nl.stil4m.transmission.api.domain.ids.NumberListIds;
 import nl.stil4m.transmission.rpc.RpcException;
 
 public class TransmissionManager {
+	private static final String URL = "url";
+	private static final String PASSWORD = "password";
+	private static final String USERNAME = "username";
 	private CommandLine line;
 
 	public TransmissionManager() {
@@ -26,9 +30,10 @@ public class TransmissionManager {
 
 	public void configure(String[] args) {
 		Options options = new Options();
-		options.addOption("username", "username", true, "Transmission web username");
-		options.addOption("password", "password", true, "Transmission web password");
-		options.addOption("url", "url", true, "Transmission web url");
+		options.addOption(Option.builder(USERNAME).argName(USERNAME).desc("Transmission web username").longOpt(USERNAME).hasArg().required().build());
+		options.addOption(Option.builder(PASSWORD).argName(PASSWORD).desc("Transmission web password").longOpt(PASSWORD).hasArg().required().build());
+		options.addOption(
+				Option.builder(URL).argName(URL).desc("Transmission web url").longOpt(URL).hasArg().required().build());
 
 		CommandLineParser parser = new DefaultParser();
 		try {
@@ -51,9 +56,9 @@ public class TransmissionManager {
 		ObjectMapper objectMapper = new ObjectMapper();
 		objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
 		final RpcConfiguration rpcConfiguration = new RpcConfiguration();
-		rpcConfiguration.setHost(URI.create(line.getOptionValue("url")));
-		rpcConfiguration.setUsername(line.getOptionValue("username"));
-		rpcConfiguration.setPassword(line.getOptionValue("password"));
+		rpcConfiguration.setHost(URI.create(line.getOptionValue(URL)));
+		rpcConfiguration.setUsername(line.getOptionValue(USERNAME));
+		rpcConfiguration.setPassword(line.getOptionValue(PASSWORD));
 
 		RPCClient client = new RPCClient(rpcConfiguration, objectMapper);
 		TransmissionRPCClient rpcClient = new TransmissionRPCClient(client);
