@@ -192,6 +192,7 @@
 									<gpgArguments>
 										<gpgArgument>--no-tty</gpgArgument>
 									</gpgArguments>
+									<useAgent>false</useAgent>
 								</configuration>
 							</execution>
 						</executions>
