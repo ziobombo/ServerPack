@@ -1,3 +1,3 @@
 #!/bin/bash
 
-/usr/bin/java -classpath /home/plex/TransmissionManager-0.0.1-SNAPSHOT-jar-with-dependencies.jar it.fraguglia.transmission.TransmissionManager
+/usr/bin/java -classpath /usr/local/share/java/ServerPack-0.0.27-jar-with-dependencies.jar it.fraguglia.transmission.TransmissionManager $@
